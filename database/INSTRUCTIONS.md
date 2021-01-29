@@ -11,6 +11,8 @@ Add an image of your diagram or a link to your diagram to the `database` folder 
 
 You may draw this on paper, draw it with a drawing app, or use a DB planning tool such as: 
 
+- https://app.sqldbm.com/PostgreSQL/Edit/p150331/#
+
 - https://www.dbdesigner.net/
 - https://sqldbm.com/Home/
 
