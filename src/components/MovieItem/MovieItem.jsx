@@ -16,7 +16,7 @@ const MovieItem = ({ movie }) => {
     dispatch({ type: "GET_DETAILS", payload: movie.id })
     setTimeout(() => {
       history.push("/details")
-    }, 10)
+    }, 20)
   }
 
   return (
@@ -29,11 +29,6 @@ const MovieItem = ({ movie }) => {
             title={movie.title}
           />
         </CardActionArea>
-        <CardContent className="cardTitle">
-          <Typography className="titleText" gutterBottom>
-            {movie.title}
-          </Typography>
-        </CardContent>
       </Card>
     </Grid>
 

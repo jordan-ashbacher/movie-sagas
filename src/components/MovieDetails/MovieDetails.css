@@ -1,4 +1,34 @@
 .genreList {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
     list-style: none;
     padding: 0;
+    width: 300px;
+}
+
+li {
+    margin: 7px;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+
+.cardDetailsContainer {
+    height: 400px;
+    width: 240px;
+}
+
+.detailsMedia {
+    height: 400px;
+    width: 240px;
+}
+
+.movieDescription {
+    width: 700px;
+    margin-top: 0;
 }

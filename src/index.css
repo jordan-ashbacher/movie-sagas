@@ -10,4 +10,5 @@ body {
   );
   color: white;
   font-family: "Assistant", sans-serif;
+  height: 100vh;
 }

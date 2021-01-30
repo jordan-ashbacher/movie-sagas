@@ -1,5 +1,5 @@
 .cardContainer {
-    height: 550px;
+    height: 500px;
     width: 340px;
     margin-bottom: 20px;
 }
@@ -10,11 +10,12 @@
 }
 
 .cardTitle {
-    background-color: black;
+    background: #03090d;
     font-family: 'Assistant', sans-serif;
 }
 
 .titleText {
     color: white;
     font-family: 'Assistant', sans-serif;
+    text-transform: uppercase;
 }

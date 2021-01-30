@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 
@@ -26,6 +27,24 @@
 a {
   text-decoration: none;
   color: white;
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 5rem;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
 }
 
 
