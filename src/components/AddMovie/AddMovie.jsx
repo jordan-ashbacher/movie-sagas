@@ -1,10 +1,13 @@
 import '../AddMovie/AddMovie.css'
 import {useState} from 'react'
 import {useDispatch} from 'react-redux'
+import {useHistory} from 'react-router-dom'
 
 const AddMovie = () => {
 
     const dispatch = useDispatch()
+    const history = useHistory()
+
     let [newMovie, setNewMovie] = useState({
         title: '',
         poster: '',
@@ -20,6 +23,17 @@ const AddMovie = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch({ type: 'ADD_MOVIE', payload: newMovie})
+        setNewMovie = {
+            title: '',
+            poster: '',
+            description: '',
+            genre_id: ''
+        }
+        history.push('/')
+    }
+
+    const handleCancel = () => {
+        history.push('/')
         setNewMovie = {
             title: '',
             poster: '',
@@ -70,7 +84,8 @@ const AddMovie = () => {
                 <option value="12">Space-Opera</option>
                 <option value="13">Superhero</option>
             </select>
-            <button type="submit">Add Movie</button>
+            <button type="submit">Save Movie</button>
+            <button onClick={handleCancel}>Cancel</button>
         </form>
         
     )
