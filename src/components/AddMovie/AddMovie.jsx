@@ -1,9 +1,11 @@
 import '../AddMovie/AddMovie.css'
 import {useState} from 'react'
+import {useDispatch} from 'react-redux'
 
 const AddMovie = () => {
 
-    const [newMovie, setNewMovie] = useState({
+    const dispatch = useDispatch()
+    let [newMovie, setNewMovie] = useState({
         title: '',
         poster: '',
         description: '',
@@ -17,7 +19,13 @@ const AddMovie = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(newMovie)
+        dispatch({ type: 'ADD_MOVIE', payload: newMovie})
+        setNewMovie = {
+            title: '',
+            poster: '',
+            description: '',
+            genre_id: ''
+        }
     }
 
     return (
