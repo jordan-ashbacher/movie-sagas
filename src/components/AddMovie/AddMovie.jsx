@@ -10,11 +10,22 @@ const AddMovie = () => {
         genre_id: ''
     })
 
+    const handleChange = (e) => {
+        const value = e.target.value
+        setNewMovie({...newMovie, [e.target.name]: value })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(newMovie)
+    }
+
     return (
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <input 
                 type="text"
                 placeholder="Title"
+                name="title"
                 value={newMovie.title}
                 onChange={handleChange}
                 required
@@ -22,6 +33,7 @@ const AddMovie = () => {
             <input 
                 type="text"
                 placeholder="Poster URL"
+                name="poster"
                 value={newMovie.poster}
                 onChange={handleChange}
                 required
@@ -29,26 +41,28 @@ const AddMovie = () => {
             <input 
                 type="textarea"
                 placeholder="Description"
+                name="description"
                 value={newMovie.description}
                 onChange={handleChange}
                 required
             />
-            <label for="genre">Genre:</label>
-            <select name="genre" id="genre">
-                <option value="Adventure">Adventure</option>
-                <option value="Animated">Animated</option>
-                <option value="Biographical">Biographical</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Disaster">Disaster</option>
-                <option value="DramaEpic">DramaEpic</option>
-                <option value="Epic">Epic</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Musical">Musical</option>
-                <option value="Romantic">Romantic</option>
-                <option value="Science Fiction">Science Fiction</option>
-                <option value="Space-Opera">Space-Opera</option>
-                <option value="Superhero">Superhero</option>
+            <label>Genre:</label>
+            <select name="genre_id" id="genre" onChange={handleChange}>
+                <option value="1">Adventure</option>
+                <option value="2">Animated</option>
+                <option value="3">Biographical</option>
+                <option value="4">Comedy</option>
+                <option value="5">Disaster</option>
+                <option value="6">DramaEpic</option>
+                <option value="7">Epic</option>
+                <option value="8">Fantasy</option>
+                <option value="9">Musical</option>
+                <option value="10">Romantic</option>
+                <option value="11">Science Fiction</option>
+                <option value="12">Space-Opera</option>
+                <option value="13">Superhero</option>
             </select>
+            <button type="submit">Add Movie</button>
         </form>
         
     )
