@@ -32,6 +32,7 @@ function* addNewMovie(action) {
 //get details of selected movie from DB
 function* getDetails(action) {
     try {
+        console.log(action.payload)
         const response = yield axios.get(`/api/movie/${action.payload}`)
         console.log(response.data)
         yield put({ type: 'SET_MOVIE_DETAILS', payload: response.data[0]})

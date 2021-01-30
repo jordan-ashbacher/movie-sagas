@@ -17,15 +17,17 @@ const MovieItem = ({ movie }) => {
   const dispatch = useDispatch()
 
   const getDetails = (e) => {
-    console.log(e)
     dispatch({ type: "GET_DETAILS", payload: movie.id })
-    history.push("/details")
+    setTimeout(() => {
+      history.push("/details")
+    }, 10)
+    
   }
 
 
 
   return (
-    <Card className="cardContainer">
+    <Card key={movie.id} className="cardContainer" onClick={getDetails}>
       <CardActionArea>
         <CardMedia className="cardMedia" image={movie.poster} title={movie.title} />
       </CardActionArea>
