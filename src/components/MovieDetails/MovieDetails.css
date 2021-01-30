@@ -32,3 +32,13 @@ li {
     width: 700px;
     margin-top: 0;
 }
+
+
+Button.MuiButton-root {
+    color: white;
+    border: white;
+}
+
+Button.MuiButton-outlined {
+    border: 1px solid white;
+}
