@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <h1>
-          <Link to="/home">The Movies Saga!</Link>
+        <h1 className='title'>
+          <Link to="/home">Movie Library</Link>
         </h1>
         <nav>
-          <span>
+          <span className='link'>
             <Link to="/add">ADD A MOVIE</Link>
           </span>
         </nav>
