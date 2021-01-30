@@ -1,0 +1,20 @@
+.cardContainer {
+    height: 550px;
+    width: 340px;
+    margin-bottom: 20px;
+}
+
+.cardMedia {
+    height: 500px;
+    width: 340px;
+}
+
+.cardTitle {
+    background-color: black;
+    font-family: 'Assistant', sans-serif;
+}
+
+.titleText {
+    color: white;
+    font-family: 'Assistant', sans-serif;
+}
