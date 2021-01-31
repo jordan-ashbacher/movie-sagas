@@ -10,7 +10,7 @@ function App() {
       <Router>
         <header>
           <h1 className="title">
-            <Link to="/home">Movie Library</Link>
+            <Link to="/home">DbMI</Link>
           </h1>
           <nav>
             <span className="link">
