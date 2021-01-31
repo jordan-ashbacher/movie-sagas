@@ -1,0 +1,48 @@
+.formContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.movieForm {
+    height: 80vh;
+    width: 500px;
+    display: flex;
+    flex-flow: column;
+}
+
+div.MuiInputBase-root {
+    color: white;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
+
+label.MuiFormLabel-root {
+    color: white;
+}
+
+div.MuiInputBase-root:focus {
+    outline-color: white;
+}
+
+.inputLabel:focus {
+    color: white;
+}
+
+Button.MuiButton-contained {
+    color: black;
+    border: white;
+    background: white;
+    margin-bottom: 10px;
+}
+
+/* div.MuiOutlinedInput-root {
+    color: white;
+} */
+
+/* div.MuiInputBase-formControl {
+    color: white;
+}
+
+div.MuiTextField-root {
+    color: white;
+} */
