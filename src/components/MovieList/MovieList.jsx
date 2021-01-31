@@ -9,6 +9,7 @@ function MovieList() {
   const dispatch = useDispatch()
   const movies = useSelector((store) => store.movies)
 
+  //gets movies from database on page load
   useEffect(() => {
     dispatch({ type: "FETCH_MOVIES" })
   }, [])
@@ -17,6 +18,7 @@ function MovieList() {
     <main>
       <Grid container justify="center" className="movies" spacing={0}>
        
+       {/* maps over movies and renders individual movie components */}
         {movies.map((movie) => {
           return <MovieItem key={movie.id} movie={movie} />
         })}

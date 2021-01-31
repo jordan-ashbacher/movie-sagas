@@ -13,6 +13,7 @@ const AddMovie = () => {
   const dispatch = useDispatch()
   const history = useHistory()
 
+  //sets inputs for new movie object
   let [newMovie, setNewMovie] = useState({
     title: "",
     poster: "",
@@ -20,11 +21,13 @@ const AddMovie = () => {
     genre_id: "",
   })
 
+  //handles input field changes and sets appropriate key/value pair
   const handleChange = (e) => {
     const value = e.target.value
     setNewMovie({ ...newMovie, [e.target.name]: value })
   }
 
+  //dispatches data to sage for addition to db
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch({ type: "ADD_MOVIE", payload: newMovie })
@@ -37,6 +40,7 @@ const AddMovie = () => {
     history.push("/")
   }
 
+  //resets newMovie object values and returns user to homepage
   const handleCancel = () => {
     history.push("/")
     setNewMovie = {

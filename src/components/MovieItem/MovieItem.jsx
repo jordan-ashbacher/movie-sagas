@@ -12,6 +12,7 @@ const MovieItem = ({ movie }) => {
   const history = useHistory()
   const dispatch = useDispatch()
 
+  //gets details of movie that is clicked and directs user to details page. timeout set to allow for data transfer between setting reducer and page load.
   const getDetails = (e) => {
     dispatch({ type: "GET_DETAILS", payload: movie.id })
     setTimeout(() => {
